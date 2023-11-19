@@ -1,0 +1,8 @@
+html, body {
+        
+        height: 100%;
+        margin: 0;
+       
+        background: linear-gradient(to top left, hsl(209, 85%, 65%), white 39%),
+                linear-gradient(to bottom left, hsl(255, 85%, 65%), white 12%);
+    }

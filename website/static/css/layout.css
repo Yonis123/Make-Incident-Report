@@ -12,15 +12,17 @@ nav div{
     width: 200px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     
 }
 
-.logo_div{
-    width: 150px;
+
+.card {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem;
+
 }
 
-nav div span{
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: large;
-}
+
