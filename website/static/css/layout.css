@@ -16,6 +16,8 @@ nav div{
     
 }
 
+
+
 /* STYLING FOR FORM */
 
 .card {
@@ -42,7 +44,7 @@ nav div{
 }
 
 .form-group:last-child{
-    mar
+    
 }
 
 .form-group > input {
@@ -54,4 +56,10 @@ nav div{
 
 .card.active {
     display: block;
+}
+
+
+.do_not_show{
+    display: none;
+
 }

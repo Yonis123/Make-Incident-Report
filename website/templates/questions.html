@@ -3,30 +3,37 @@
 {%block content%}
     <form data-multi-step>
         <div class="card" data-step>
+            <h3>Tell us about the incident</h3>
             <div class="form-group">
-                <label for="Email">Big Email</label>
-                <input type="email" name="email" id="email">
+                <label for="address">The incident happened at</label>
+                <input type="text" name="address" id="address" placeholder="Ex. 14 Downsview Avenue">
             </div>
             <div class="form-group">
-                <label for="Password">Password</label>
-                <input type="password" name="password" id="password">
+                <label for="urgency">Password</label>
+                <select name="urgency">
+                    <option value="low_urgency">Low Urgency</option>
+                    <option value="medium_urgency">Medium Urgency</option>
+                    <option value="high_urgency">High Urgency</option>
+                </select>
             </div>
              <div class="form-group">
-                <label for="Random">Random</label>
-                <input type="text" name="random" id="random">
+                <label for="date">The incident occured on</label>
+                <input type="date" name="date" id="date">
             </div>
             <button type="button" data-next>Next</button>
         </div>
-        <div class="card" data-step=>
+        <div class="card" data-step>
+            <h3>Tell Us More</h3>
             <div class="form-group">
-                <label for="Address">Email</label>
-                <input type="text" name="Adress" id="address">
+                <label for="start_time">What time did the incident start</label>
+                <input type="time" name="start_time" id="start_time">
             </div>
             <div class="form-group">
-                <label for="random2">Password</label>
-                <input type="text" name="random2" id="random2">
+                <label for="resolved">Has the incident been resolved?</label>
+                <input type="radio" name="resolved" id="resolved_yes" value="yes" resolved-yes>Yes
+                <input type="radio" name="resolved" id="resolved_no" value="no">No
             </div>
-             <div class="form-group">
+             <div class="form-group do_not_show" id="resolved_other">
                 <label for="Random3">Random</label>
                 <input type="text" name="random3" id="random3">
             </div>
