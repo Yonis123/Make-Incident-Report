@@ -82,3 +82,44 @@ radio2.addEventListener('change', function() {
 });
 
 
+// depending on choice of people involved, add the amount of people to fill in ///////////////////////////////////////////////////////////////////
+
+
+let people_involved = document.getElementById("people_involved");
+
+
+people_involved.addEventListener("change", function() {
+  // Get the value of the selected option
+  let selectedOption = this.value
+  console.log(selectedOption)
+
+
+  const people_involved_form = document.querySelector('[form-witness]')
+  
+  const potential_people_involved =[...people_involved_form.querySelectorAll('[witness-step]')]
+    
+  if (selectedOption == 0){
+    potential_people_involved.forEach(element => {
+        element.classList.add('do_not_show')
+    })
+  }else if (selectedOption == 1){
+    potential_people_involved.forEach(element => {
+        element.classList.add('do_not_show')
+    })
+    potential_people_involved[0].classList.remove('do_not_show')
+
+  }else if (selectedOption == 2){
+    potential_people_involved.forEach(element => {
+        element.classList.add('do_not_show')
+    })
+    potential_people_involved[0].classList.remove('do_not_show')
+    potential_people_involved[1].classList.remove('do_not_show')
+  } else if(selectedOption == 3){
+    potential_people_involved[0].classList.remove('do_not_show')
+    potential_people_involved[1].classList.remove('do_not_show')
+    potential_people_involved[2].classList.remove('do_not_show')
+  } else{
+    //we need to make a pop up that tells them to add the people names and any relevant information to the comments portion or something
+  }
+
+})

@@ -34,13 +34,75 @@
                 <input type="radio" name="resolved" id="resolved_no" value="no">No
             </div>
              <div class="form-group do_not_show" id="resolved_other">
-                <label for="Random3">Random</label>
-                <input type="text" name="random3" id="random3">
+                <label for="time_resolved">What time was the incident resolved?</label>
+                <input type="time" name="time_resolved" id="time_resolved">
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="button" data-next>Next</button>
         </div>
-        <div class="card" data-step=>
+        <div class="card" data-step>
+            <h3>Who was involved</h3>
+            <div class="form-group">
+                <label for="people_involved">How many people were involved (excluding you)</label>
+                <select name="people" id="people_involved">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4+</option>
+                </select>
+            </div>
+            <div class="form-group" form-witness>
+                <div class="person_1 do_not_show" witness-step>
+                <label  for="person_1_name">What is the first person's name?</label>
+                    <input  type="text" name="person_1_name" id="person_1_name" placeholder="Ex. Jerry Goldberg">
+
+                    <label for="person_1_type">The first person is a</label>
+                    <select  name="person_1_type">
+                        <option value="resident">Resident</option>
+                        <option value="staff">Staff</option>
+                        <option value="contractor">Contractor</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label  for="person_1_statement">Please provide the statement of the first person (please ensure any statements recorded are accurate and well-informed)</label>
+                    <input  type="text" name="person_1_statement" id="person_1_statement">
+                </div>
+                <div class="person_2 do_not_show" witness-step>
+                    <label  for="person_2_name">What is the second person's name?</label>
+                    <input  type="text" name="person_2_name" id="person_2_name" placeholder="Ex. Jerry Goldberg">
+                    
+                    <label  for="person_2_type">The second person is a</label>
+                    <select  name="person_2_type">
+                        <option value="resident">Resident</option>
+                        <option value="staff">Staff</option>
+                        <option value="contractor">Contractor</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label  for="person_2_statement">Please provide the statement of the second person (please ensure any statements recorded are accurate and well-informed)</label>
+                    <input  type="text" name="person_2_statement" id="person_2_statement">
+                </div>
+                <div class="person_3 do_not_show" witness-step>
+                    <label  for="person_3_name">What is the third person's name?</label>
+                    <input  type="text" name="person_2_name" id="person_2_name" placeholder="Ex. Jerry Goldberg">
+                    
+                    <label  for="person_3_type">The thirdperson is a</label>
+                    <select  name="person_3_type">
+                        <option value="resident">Resident</option>
+                        <option value="staff">Staff</option>
+                        <option value="contractor">Contractor</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label  for="person_3_statement" >Please provide the statement of the third person (please ensure any statements recorded are accurate and well-informed)</label>
+                    <input  type="text" name="person_3_statement" id="person_3_statement">
+                </div>
+            </div>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
             <div class="form-group">
                 <label for="fistName">first name</label>
                 <input type="text" name="firstName" id="firstName">
