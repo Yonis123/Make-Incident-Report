@@ -9,7 +9,7 @@
                 <input type="text" name="address" id="address" placeholder="Ex. 14 Downsview Avenue">
             </div>
             <div class="form-group">
-                <label for="urgency">Password</label>
+                <label for="urgency">On a scale of urgency how would you rank the event? </label>
                 <select name="urgency">
                     <option value="low_urgency">Low Urgency</option>
                     <option value="medium_urgency">Medium Urgency</option>
@@ -103,17 +103,43 @@
             <button type="button" data-next>Next</button>
         </div>
         <div class="card" data-step>
+            <h3>Tell Us What Happened</h3>
             <div class="form-group">
-                <label for="fistName">first name</label>
-                <input type="text" name="firstName" id="firstName">
+                <label for="event_description">Please describe what happened</label>
+                <input type="text" name="event_description" id="event_description">
+            </div>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
+            <h3>Did any of the following arrive?</h3>
+            <div class="form-group">
+                <input type="checkbox" id="fireAlarm" name="fireAlarm" value="Fire Alarm">
+                <label for="fireAlarm">Fire department</label><br>
+                <input type="checkbox" id="medicalIssue" name="medicalIssue" value="Medical Issue">
+                <label for="medicalIssue">Emergency Medical Services</label><br>
+                <input type="checkbox" id="equipmentMalfunction" name="equipmentMalfunction" value="Equipment Malfunction or Entrapment">
+                <label for="equipmentMalfunction">Police Department Services </label><br>
+                <input type="checkbox" id="civilDisturbance" name="civilDisturbance" value="Civil Disturbance">
+                <label for="civilDisturbance">Contractor(s)/Trade(s)</label><br>
+                <input type="checkbox" id="chemicalSpill" name="chemicalSpill" value="Chemical Spill">
+                <label for="chemicalSpill">Other</label><br>
+            </div>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
+            <div class="form-group">
+                <label for="full_name">My full name is</label>
+                <input type="text" name="full_name" id="full_name">
             </div>
             <div class="form-group">
-                <label for="random4">randomer</label>
-                <input type="text" name="random4" id="random4">
+                <label for="email">My email is</label>
+                <input type="email" name="" id="email">
             </div>
              <div class="form-group">
-                <label for="Random5">Randomness</label>
-                <input type="text" name="random5" id="random5">
+                <label for="phone_num">Randomness</label>
+                <input type="text" name="phone_num" id="phone_num">
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="submit">Submit</button>
