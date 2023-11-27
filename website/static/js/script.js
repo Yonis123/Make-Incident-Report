@@ -4,6 +4,11 @@ const multiStepForm = document.querySelector('[data-multi-step]')
 
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
 
+const circles = document.querySelector('[circles]')
+const circle_arr = [...circles.querySelectorAll("[circle]")]
+
+
+
 
 
 let currentStep = formSteps.findIndex(step => {
@@ -16,6 +21,8 @@ if (currentStep < 0){
     currentStep = 0
     formSteps[currentStep].classList.add("active")
     showCurrentStep()
+
+    circle_arr[currentStep].style.backgroundColor = 'hwb(209 55% 5%)'
 }
 
 multiStepForm.addEventListener("click", e => { 
@@ -39,6 +46,7 @@ multiStepForm.addEventListener("click", e => {
     if (allValid){
         currentStep += incrementor
         showCurrentStep()
+        changeCircleColor(incrementor)
     }
 })
 
@@ -51,9 +59,8 @@ function showCurrentStep(){
         step.classList.toggle("active", index == currentStep)
         
     })
- 
+    
 }
-
 
 
 
@@ -123,3 +130,27 @@ people_involved.addEventListener("change", function() {
   }
 
 })
+
+
+
+function changeCircleColor(incrementor){
+//  make previous color transparent
+
+
+  let previous 
+  if (incrementor == -1) {
+      previous = currentStep + 1
+  } else{
+    previous = currentStep - 1
+  }
+
+  circle_arr[previous].style.backgroundColor = 'transparent'
+  circle_arr[currentStep].style.backgroundColor = 'hwb(209 55% 5%)'
+
+}
+
+
+
+
+// circle_arr[2].style.backgroundColor = 'red'
+

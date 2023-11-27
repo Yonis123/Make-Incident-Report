@@ -3,6 +3,6 @@ html, body {
         height: 100%;
         margin: 0;
        
-        background: linear-gradient(to top left, hwb(209 55% 5%), white 39%),
+        background: linear-gradient(to top left, rgb(140, 193, 242), white 39%),
                 linear-gradient(to bottom left, hsl(255, 85%, 65%), white 12%);
     }
