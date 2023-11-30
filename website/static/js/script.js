@@ -73,18 +73,30 @@ function showCurrentStep(){
 const radio1 = document.getElementById('resolved_yes');
 const radio2 = document.getElementById('resolved_no');
 
+const yes = document.getElementById('yes');
+const no = document.getElementById('no');
+
 const other = document.getElementById('resolved_other')
+const resolved = document.getElementById('resolved_incident')
+
 
 // Add event listeners
 radio1.addEventListener('change', function() {
   if (radio1.checked) {
     other.classList.remove('do_not_show')
+    resolved.style.marginBottom = '0px'
+    yes.style.backgroundColor = 'pink'
+    no.style.backgroundColor = 'white'
   }
 });
 
 radio2.addEventListener('change', function() {
   if (radio2.checked) {
     other.classList.add('do_not_show')
+    resolved.style.marginBottom = '24px'
+    no.style.backgroundColor = 'pink'
+    yes.style.backgroundColor = 'white'
+
   }
 });
 

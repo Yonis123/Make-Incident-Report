@@ -38,10 +38,14 @@
                 <label for="start_time">What time did the incident start</label>
                 <input type="time" name="start_time" id="start_time">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="resolved_div">
                 <label for="resolved">Has the incident been resolved?</label>
-                <input type="radio" name="resolved" id="resolved_yes" value="yes" resolved-yes>Yes
-                <input type="radio" name="resolved" id="resolved_no" value="no">No
+                 <div id="resolved_incident">
+                    <input class="resolved_yes" type="radio" name="resolved" id="resolved_yes" value="yes" resolved-yes>
+                    <label for="resolved_yes" class="yes_no" id="yes">Yes</label>
+                    <input class="radio" type="radio" name="resolved" id="resolved_no" value="no">
+                    <label for="resolved_no" class="yes_no" id="no">No</label>
+                </div>
             </div>
              <div class="form-group do_not_show" id="resolved_other">
                 <label for="time_resolved">What time was the incident resolved?</label>
@@ -52,7 +56,7 @@
         </div>
         <div class="card" data-step>
             <h3>Who was involved</h3>
-            <div class="form-group">
+            <div class="form-group" id="involved_div">
                 <label for="people_involved">How many people were involved (excluding you)</label>
                 <select name="people" id="people_involved">
                     <option value=0>0</option>

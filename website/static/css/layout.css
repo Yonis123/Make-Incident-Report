@@ -38,7 +38,7 @@ nav div{
     display: flex;
     flex-direction: column;
     gap: .25rem;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     gap: .25rem;
 }
 
@@ -101,6 +101,56 @@ nav div{
     margin-bottom: 40px;
 }
 
+.my_form .radio {
+    width: 20px;
+
+}
+
+
+ input[type="radio"] {
+    display: none;
+  }
+
+  .yes_no{
+    border: 1px solid black;
+    width: 66px;
+    height: 30px;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+ #resolved_incident{
+    display: flex;
+
+ }
+
+ .card #resolved_incident{
+    margin-bottom: 24px;
+    width: 141px;
+    justify-content: space-between;
+}
+
+.card #involved_div{
+    margin-bottom: 0px;
+}
+
+
+  /*
+  label {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked + label {
+    background-color: #f44336;
+  } */
+
+
 /* FOR BUBBLES */
 
 .for_bubbles{
@@ -137,6 +187,7 @@ button {
     font-weight: 600;
     font-size: .9rem;
     color: white;
+    margin-right: 17px;
 }
 
 button:hover{
