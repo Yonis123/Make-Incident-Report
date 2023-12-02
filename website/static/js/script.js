@@ -85,17 +85,29 @@ radio1.addEventListener('change', function() {
   if (radio1.checked) {
     other.classList.remove('do_not_show')
     resolved.style.marginBottom = '0px'
-    yes.style.backgroundColor = 'pink'
+    yes.style.backgroundColor = 'rgba(223, 223, 223, 0.92)'
+    yes.style.border = '2px solid black'
     no.style.backgroundColor = 'white'
+    no.style.border = '1px solid black'
+    // no.addEventListener('mouseover', function() {
+    //   no.style.backgroundColor = 'rgba(223, 223, 223, 0.92)';
+    // });
+    // no.addEventListener('mouseout', function() {
+    //   no.style.backgroundColor = 'white';
+    // });
   }
 });
+
+// fix this issue 
 
 radio2.addEventListener('change', function() {
   if (radio2.checked) {
     other.classList.add('do_not_show')
     resolved.style.marginBottom = '24px'
-    no.style.backgroundColor = 'pink'
+    no.style.backgroundColor = 'rgba(223, 223, 223, 0.92)'
+    no.style.border = '2px solid black'
     yes.style.backgroundColor = 'white'
+    yes.style.border = '1px solid black'
 
   }
 });

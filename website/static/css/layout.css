@@ -137,6 +137,13 @@ nav div{
     margin-bottom: 0px;
 }
 
+.yes_no:hover{
+    background-color: rgba(223, 223, 223, 0.92);
+    border: 2px solid black
+    
+}
+
+
 
   /*
   label {
