@@ -66,9 +66,9 @@
                     <option value=4>4+</option>
                 </select>
             </div>
-            <div class="form-group" form-witness>
-                <div class="person_1 do_not_show" witness-step>
-                <label  for="person_1_name">What is the first person's name?</label>
+            <div class="form-group witness_div" form-witness id="form_wit">
+                <div class="person_1 do_not_show" witness-step id="reference_1">
+                    <label  for="person_1_name">What is the first person's name?</label>
                     <input  type="text" name="person_1_name" id="person_1_name" placeholder="Ex. Jerry Goldberg">
 
                     <label for="person_1_type">The first person is a</label>
@@ -79,10 +79,10 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label  for="person_1_statement">Please provide the statement of the first person (please ensure any statements recorded are accurate and well-informed)</label>
-                    <input  type="text" name="person_1_statement" id="person_1_statement">
+                    <label  for="person_1_contact">Please include their phone number or email if you have it</label>
+                    <input  type="text" name="person_1_contact" id="person_1_contact">
                 </div>
-                <div class="person_2 do_not_show" witness-step>
+                <div class="person_2 do_not_show" witness-step id="reference_2">
                     <label  for="person_2_name">What is the second person's name?</label>
                     <input  type="text" name="person_2_name" id="person_2_name" placeholder="Ex. Jerry Goldberg">
                     
@@ -94,14 +94,14 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label  for="person_2_statement">Please provide the statement of the second person (please ensure any statements recorded are accurate and well-informed)</label>
-                    <input  type="text" name="person_2_statement" id="person_2_statement">
+                    <label  for="person_2_contact">Please include their phone number or email if you have it</label>
+                    <input  type="text" name="person_2_contact" id="person_2_contact">
                 </div>
-                <div class="person_3 do_not_show" witness-step>
+                <div class="person_3 do_not_show" witness-step id="reference_3">
                     <label  for="person_3_name">What is the third person's name?</label>
                     <input  type="text" name="person_2_name" id="person_2_name" placeholder="Ex. Jerry Goldberg">
                     
-                    <label  for="person_3_type">The thirdperson is a</label>
+                    <label  for="person_3_type">The third person is a</label>
                     <select  name="person_3_type">
                         <option value="resident">Resident</option>
                         <option value="staff">Staff</option>
@@ -109,8 +109,8 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label  for="person_3_statement" >Please provide the statement of the third person (please ensure any statements recorded are accurate and well-informed)</label>
-                    <input  type="text" name="person_3_statement" id="person_3_statement">
+                    <label  for="person_3_contact">Please include their phone number or email if you have it</label>
+                    <input  type="text" name="person_3_contact" id="person_3_contact">
                 </div>
             </div>
             <button type="button" data-previous>Previous</button>
