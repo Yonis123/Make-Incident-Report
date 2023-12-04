@@ -223,8 +223,13 @@ input[type="checkbox"]{
 }
 
 .arrival_div{
-    
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+}
 
+.arrivals:hover{
+    background-color: rgba(223, 223, 223, 0.92);
 }
 
   /*

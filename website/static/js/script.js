@@ -207,7 +207,34 @@ function changeCircleColor(incrementor){
 //  arrival part
 
 
-const fire = document.getElementById('the_fireAlarm')
+const arrival_form = document.querySelector('[service_div]')
 
+const services_inputs = [...arrival_form.querySelectorAll('[input]')]
+const services_labels = [...arrival_form.querySelectorAll('[label]')]
+
+services_inputs.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        if (element.checked){
+            services_labels[index].style.backgroundColor = 'rgba(223, 223, 223, 0.92)'
+            services_labels[index].style.border = '2px solid black'
+            
+            if (element == services_inputs[services_inputs.length - 1]){
+                // const node = document.createElement("p");
+                // const textnode = document.createTextNode("This is a new paragraph.");
+                // node.appendChild(textnode);
+                // document.getElementById("myDiv").appendChild(node);
+                
+                // arrival_form.append()
+            }
+
+        } else{
+            services_labels[index].style.backgroundColor = ''
+            services_labels[index].style.border = '1px solid black'
+        }
+    })
+
+    
+
+})
 
 
