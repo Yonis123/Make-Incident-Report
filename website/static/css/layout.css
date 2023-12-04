@@ -199,6 +199,34 @@ nav div{
     margin-bottom: 40px;
 }
 
+#event_description{
+    height: 25vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+input[type="checkbox"]{
+    /* visibility: hidden; */
+    height: 0px;
+    width: 0px;
+}
+
+.arrivals{
+    border: 1px solid black;
+    width: 286px;
+    height: 41px;
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrival_div{
+    
+
+}
+
   /*
   label {
     padding: 10px;

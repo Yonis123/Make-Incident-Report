@@ -119,25 +119,25 @@
         <div class="card" data-step>
             <h3>Tell Us What Happened</h3>
             <div class="form-group">
-                <label for="event_description">Please describe what happened</label>
-                <input type="text" name="event_description" id="event_description">
+                <label for="event_description">Please describe what happened with as much detail as possible</label>
+                <textarea id="event_description" name="event_description" rows="7" cols="50"></textarea>
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="button" data-next>Next</button>
         </div>
         <div class="card" data-step>
             <h3>Did any of the following arrive?</h3>
-            <div class="form-group">
-                <input type="checkbox" id="fireAlarm" name="fireAlarm" value="Fire Alarm">
-                <label for="fireAlarm">Fire department</label><br>
+            <div class="form-group arrival_div">
+                <input type="checkbox" id="the_fireAlarm" value="Fire Alarm">
+                <label class="arrivals"  for="the_fireAlarm">Fire department</label>
                 <input type="checkbox" id="medicalIssue" name="medicalIssue" value="Medical Issue">
-                <label for="medicalIssue">Emergency Medical Services</label><br>
+                <label class="arrivals" for="medicalIssue">Emergency Medical Services</label>
                 <input type="checkbox" id="equipmentMalfunction" name="equipmentMalfunction" value="Equipment Malfunction or Entrapment">
-                <label for="equipmentMalfunction">Police Department Services </label><br>
+                <label class="arrivals" for="equipmentMalfunction">Police Department Services </label>
                 <input type="checkbox" id="civilDisturbance" name="civilDisturbance" value="Civil Disturbance">
-                <label for="civilDisturbance">Contractor(s)/Trade(s)</label><br>
+                <label class="arrivals" for="civilDisturbance">Contractor(s)/Trade(s)</label>
                 <input type="checkbox" id="chemicalSpill" name="chemicalSpill" value="Chemical Spill">
-                <label for="chemicalSpill">Other</label><br>
+                <label class="arrivals" for="chemicalSpill">Other</label>
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="button" data-next>Next</button>

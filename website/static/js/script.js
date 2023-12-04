@@ -204,7 +204,10 @@ function changeCircleColor(incrementor){
 }
 
 
+//  arrival part
 
 
-// circle_arr[2].style.backgroundColor = 'red'
+const fire = document.getElementById('the_fireAlarm')
+
+
 
