@@ -232,6 +232,10 @@ input[type="checkbox"]{
     background-color: rgba(223, 223, 223, 0.92);
 }
 
+#other_arrive_input{
+    margin-top: -10px;
+}
+
   /*
   label {
     padding: 10px;

@@ -219,17 +219,31 @@ services_inputs.forEach((element, index) => {
             services_labels[index].style.border = '2px solid black'
             
             if (element == services_inputs[services_inputs.length - 1]){
-                // const node = document.createElement("p");
-                // const textnode = document.createTextNode("This is a new paragraph.");
-                // node.appendChild(textnode);
-                // document.getElementById("myDiv").appendChild(node);
-                
-                // arrival_form.append()
+                const node_input = document.createElement("input");
+                node_input.setAttribute("id", "specify_other_input")
+                node_input.style.marginTop = '-10px'
+
+                const node_label = document.createElement("label");
+                node_label.setAttribute("id", 'specify_other_label')
+
+                const textnode = document.createTextNode("Specify which other emergency service arrived:");
+                node_label.appendChild(textnode);
+
+                arrival_form.appendChild(node_label)
+                arrival_form.appendChild(node_input)
+                arrival_form.append()
             }
 
         } else{
             services_labels[index].style.backgroundColor = ''
             services_labels[index].style.border = '1px solid black'
+            if (element == services_inputs[services_inputs.length - 1]){
+                node_label = document.getElementById('specify_other_label')
+                node_input = document.getElementById('specify_other_input')
+                arrival_form.removeChild(node_label)
+                arrival_form.removeChild(node_input)
+                
+            }
         }
     })
 
