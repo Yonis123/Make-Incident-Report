@@ -9,9 +9,10 @@
         <div id="circle4" class="circle" circle></div>
         <div id="circle5" class="circle" circle></div>
         <div id="circle6" class="circle" circle></div>
+        <div id="circle7" class="circle" circle></div>
     </div>
     
-    <form data-multi-step class="my_form">
+    <form data-multi-step class="my_form" method="POST">
         <div class="card" data-step>
             <h3>Tell us about the incident</h3>
             <div class="form-group">
@@ -145,6 +146,15 @@
             <button type="button" data-next>Next</button>
         </div>
         <div class="card" data-step>
+            <h3>Tell Us More</h3>
+            <div class="form-group">
+                <label for="comments">Please include any additional information that might be useful to the property manager</label>
+                <textarea id="comments" name="comments" rows="7" cols="50"></textarea>
+            </div>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
+        </div>
+        <div class="card" data-step>
             <h3>Tell us about yourself</h3>
             <div class="form-group">
                 <label for="full_name">My full name is</label>
@@ -155,8 +165,8 @@
                 <input type="email" name="" id="email">
             </div>
              <div class="form-group">
-                <label for="phone_num">Randomness</label>
-                <input type="text" name="phone_num" id="phone_num">
+                <label for="pms_emails">Please include the emails of who you would like to send the report to</label>
+                <input type="text" name="pms_email" id="emails_to_send_to" placeholder="email123@gmail.com email456@live.com email324@gmail.com">
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="submit">Submit</button>

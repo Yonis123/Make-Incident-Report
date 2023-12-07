@@ -199,12 +199,12 @@ nav div{
     margin-bottom: 40px;
 }
 
-#event_description{
+/* #event_description, #comments{
     height: 25vh;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 1.5;
-}
+} */
 
 input[type="checkbox"]{
     /* visibility: hidden; */
