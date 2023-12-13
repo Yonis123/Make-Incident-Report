@@ -2,12 +2,13 @@
 
 from fpdf import FPDF
 
+
 class PDF(FPDF):
     def __init__(self, **kwargs):
         super(PDF, self).__init__(**kwargs)
         self.add_page()
-        self.add_font('Roboto-Bold', '', r'C:\Users\ynur4\Documents\incident_report_app\website\pdf_generate_package\Roboto-Bold.ttf', uni=True)
-        self.add_font('Roboto-Medium', '', r'C:\Users\ynur4\Documents\incident_report_app\website\pdf_generate_package\Roboto-Medium.ttf', uni=True)
+        self.add_font('Roboto-Bold', '', r'C:\Users\ynur4\Documents\incident_report_app\website\fonts\Roboto-Bold.ttf', uni=True)
+        self.add_font('Roboto-Medium', '', r'C:\Users\ynur4\Documents\incident_report_app\website\fonts\Roboto-Medium.ttf', uni=True)
     def make_header(self):
         # image_file = 'fs_pic.png'
         # self.image(name=image_file, x=2, y=9, w=64.4, h=14.61, type='PNG')
@@ -115,3 +116,26 @@ def make_pdf(site_name, incident_type, date, time, weather, description_of_event
     pdf.text_box_single_line(x=45 + 45, y=pdf.get_y(), w=60, h=12, text='')
     pdf.make_title(text='Signature', x=17 + 45, y=pdf.get_y() + 20, size=12)
     pdf.text_box_single_line(x=45 + 45, y=pdf.get_y(), w=60, h=12, text='')
+    
+    pdf.output("output.pdf")
+    
+site = input('What is the site of the address?')
+incident = input('What was the incident')
+date = input('What was the date of the incident?')
+time = input('What was the time of the incident')
+weather = input('What was the weather when the incident occured?')
+DOE = input('What happened in the incident (provide full description)?')
+TER = input('What was the emergency response?')
+SSR = input('who was the supervisory staff responder?')
+OSR = input('Who was the outside service responder')
+PI = input('Who was involved?')
+AT = input('What did you do?')
+RN = input('What is your name?')
+RT = input('What is your title?')
+RD = input('What is the date today?')
+RC = input('What is your phone number')
+comment = input('Any other information that would be helpful for the property managers to know?')
+
+make_pdf(site_name=site, incident_type=incident, date=date, time=time, weather=weather, description_of_event=DOE, type_of_emergency_response=TER,
+             supervisory_staff_responder=SSR, outside_service_responder=OSR, people_involved=PI, action_taken=AT, reported_name=RN,
+             reported_title=RT, reported_date=RD, reported_contact=RC, comments=comment)
