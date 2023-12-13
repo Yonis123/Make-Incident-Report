@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request
+from .pdf_gen import *
 
 
 views = Blueprint('views', __name__)
@@ -16,7 +17,6 @@ def make_report():
         incident_report_data = request.form
         # now I want to use this data to generate an incident report, and save that pdf. Once I have it I want
         # to save that pdf, send and send off the email with the pdf and then also i need to do db stuff for that pdf 
-        
         
         
         
