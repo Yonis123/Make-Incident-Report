@@ -10,6 +10,7 @@
         <div id="circle5" class="circle" circle></div>
         <div id="circle6" class="circle" circle></div>
         <div id="circle7" class="circle" circle></div>
+        <div id="circle8" class="circle" circle></div>
     </div>
     
     <form data-multi-step class="my_form" method="POST">
@@ -79,8 +80,10 @@
                         <option value="contractor">Contractor</option>
                         <option value="other">Other</option>
                     </select>
+                    <label  for="person_1_contact">Please include any additional information about the first person such as injuries, symptoms, or statements made by the person</label>
+                    <textarea class="extra" id="person_1_additional" name="person_1_extra" rows="4" cols="50"></textarea>
 
-                    <label  for="person_1_contact">Please include their phone number or email if you have it</label>
+                    <label class="contact_wit"  for="person_1_contact">Please include their phone number or email if you have it</label>
                     <input  type="text" name="person_1_contact" id="person_1_contact">
                 </div>
                 <div class="person_2 do_not_show" witness-step id="reference_2">
@@ -94,8 +97,10 @@
                         <option value="contractor">Contractor</option>
                         <option value="other">Other</option>
                     </select>
+                    <label  for="person_2_contact">Please include any additional information about the second person such as injuries, symptoms, or statements made by the person</label>
+                    <textarea class="extra" id="person_2_additional" name="person_2_extra" rows="4" cols="50"></textarea>
 
-                    <label  for="person_2_contact">Please include their phone number or email if you have it</label>
+                    <label class="contact_wit"  for="person_2_contact">Please include their phone number or email if you have it</label>
                     <input  type="text" name="person_2_contact" id="person_2_contact">
                 </div>
                 <div class="person_3 do_not_show" witness-step id="reference_3">
@@ -110,8 +115,12 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label  for="person_3_contact">Please include their phone number or email if you have it</label>
+                    <label  for="person_3_contact">Please include any additional information about the third person such as injuries, symptoms, or statements made by the person</label>
+                    <textarea class="extra" id="person_3_additional" name="person_3_extra" rows="4" cols="50"></textarea>
+
+                    <label class="contact_wit"  for="person_3_contact">Please include their phone number or email if you have it</label>
                     <input  type="text" name="person_3_contact" id="person_3_contact">
+                    
                 </div>
             </div>
             <button type="button" data-previous>Previous</button>
@@ -120,8 +129,35 @@
         <div class="card" data-step>
             <h3>Tell Us What Happened</h3>
             <div class="form-group">
-                <label for="event_description">Please describe what happened with as much detail as possible</label>
+                <label for="event_description">Please describe what happened and your response in as much detail as possible</label>
                 <textarea id="event_description" name="event_description" rows="7" cols="50"></textarea>
+            </div>
+            <button type="button" data-previous>Previous</button>
+            <button type="button" data-next>Next</button>
+        </div>
+        <div id="happen_card" class="card" data-step>
+            <h3>Did any of the following happen?</h3>
+            <div class="form_group" service_d>
+                <input name="happened" type="checkbox" id="fire_Alarm" value="Fire Alarm" inp>
+                <label class="arrivals"  for="fire_Alarm" id="fire_label" lab>Fire Alarm</label>
+                <input name="happened" type="checkbox" id="medical_incident" value="medical" inp>
+                <label class="arrivals"  for="medical_incident" id="medical_label" lab>Medical Incident</label>
+                <input name="happened" type="checkbox" id="chemical_spill" value="chemical_spill" inp>
+                <label class="arrivals"  for="chemical_spill" id="chemical_spill_label" lab>Chemical Spill</label>
+                <input name="happened" type="checkbox" id="power_failure" value="power_failure" inp>
+                <label class="arrivals"  for="power_failure" id="power_failure_label" lab>Power Failure</label>
+                <input name="happened" type="checkbox" id="slip_fall" value="slip_fall" inp>
+                <label class="arrivals"  for="slip_fall" id="slipe_fall_label" lab>Slip and Fall</label>
+                <input name="happened" type="checkbox" id="Water_damage_flood" value="Water_damage_flood" inp>
+                <label class="arrivals"  for="Water_damage_flood" id="water_damage_label" lab>Water Damage & Flood</label>
+                <input name="happened" type="checkbox" id="elevator_malfunction_entrapment" value="elevator_malfunction_entrapment" inp>
+                <label class="arrivals"  for="elevator_malfunction_entrapment" id="elevator_mal_label" lab>Elevator Issue</label>
+                <input name="happened" type="checkbox" id="civil_disturbance" value="civil_disturbance" inp>
+                <label class="arrivals"  for="civil_disturbance" id="civil_disturbance_label" lab>Civil disturbance</label>
+                <input name="happened" type="checkbox" id="Bomb_suspicious_package" value="Bomb_suspicious_package" inp>
+                <label class="arrivals"  for="Bomb_suspicious_package" id="bomb_suspicious_package_label" lab>Bomb Threat</label>
+                <input name="happened" type="checkbox" id="natural_gas_leak" value="natural_gas_leak" inp>
+                <label class="arrivals"  for="natural_gas_leak" id="gas_leak_label" lab>Natural Gas Leak</label>
             </div>
             <button type="button" data-previous>Previous</button>
             <button type="button" data-next>Next</button>
@@ -129,15 +165,15 @@
         <div id="arrival_card" class="card" data-step>
             <h3>Did any of the following arrive?</h3>
             <div class="form-group arrival_div" service_div>
-                <input type="checkbox" id="the_fireAlarm" value="Fire Alarm" input>
+                <input name="arrived" type="checkbox" id="the_fireAlarm" value="Fire Alarm" input>
                 <label class="arrivals"  for="the_fireAlarm" id="fire_label" label>Fire department</label>
-                <input type="checkbox" id="medicalIssue" name="medicalIssue" value="Medical Issue" input>
+                <input name="arrived" type="checkbox" id="medicalIssue" name="medicalIssue" value="Medical Issue" input>
                 <label class="arrivals" for="medicalIssue" label>Emergency Medical Services</label>
-                <input type="checkbox" id="police_service" name="police_service" value="Police" input>
+                <input name="arrived" type="checkbox" id="police_service" name="police_service" value="Police" input>
                 <label class="arrivals" for="police_service" label>Police Department Services </label>
-                <input type="checkbox" id="contractor_trade" name="contractor_trade" value="contractor_trade" input>
+                <input name="arrived" type="checkbox" id="contractor_trade" name="contractor_trade" value="contractor_trade" input>
                 <label class="arrivals" for="contractor_trade" label>Contractor(s)/Trade(s)</label>
-                <input type="checkbox" id="other_arrival" name="other_arrival" value="other" input>
+                <input name="arrived" type="checkbox" id="other_arrival" name="other_arrival" value="other" input>
                 <label class="arrivals" for="other_arrival" label>Other</label> 
                 <!-- <label id="other_arrive_label" class="item_1" for="specify_other">Specify which other emergency service arrived:</label> 
                 <input id="other_arrive_input" class="item_2" type="text" id="specify_other" name="specify_other"> -->
@@ -161,8 +197,8 @@
                 <input type="text" name="full_name" id="full_name">
             </div>
             <div class="form-group">
-                <label for="email">My email is</label>
-                <input type="email" name="" id="email">
+                <label for="contact_info">Please include your phone number or email</label>
+                <input type="text" name="contact_info" id="contact_info">
             </div>
              <div class="form-group">
                 <label for="pms_emails">Please include the emails of who you would like to send the report to</label>

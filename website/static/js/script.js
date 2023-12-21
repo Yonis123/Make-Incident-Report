@@ -206,8 +206,9 @@ function changeCircleColor(incrementor){
 
 //  arrival part
 
-
 const arrival_form = document.querySelector('[service_div]')
+
+
 
 const services_inputs = [...arrival_form.querySelectorAll('[input]')]
 const services_labels = [...arrival_form.querySelectorAll('[label]')]
@@ -251,4 +252,25 @@ services_inputs.forEach((element, index) => {
 
 })
 
+const happen_form = document.querySelector('[service_d]')
 
+const happen_inputs = [...happen_form.querySelectorAll('[inp]')]
+const happen_labels = [...happen_form.querySelectorAll('[lab]')]
+
+
+
+happen_inputs.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        if (element.checked){
+            happen_labels[index].style.backgroundColor = 'rgba(223, 223, 223, 0.92)'
+            happen_labels[index].style.border = '2px solid black'
+
+        } else{
+            happen_labels[index].style.backgroundColor = ''
+            happen_labels[index].style.border = '1px solid black'
+        }
+    })
+
+    
+
+})
