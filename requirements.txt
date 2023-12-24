@@ -1,1 +1,14 @@
--e git+https://github.com/Yonis123/Make-Incident-Report.git@a4bfdc285199ecf311ae249ec1471aa032d71ed9#egg=yonis_ir
+blinker==1.6.3
+click==8.1.7
+colorama==0.4.6
+Flask==2.3.0
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.1.1
+fpdf==1.7.2
+greenlet==3.0.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+SQLAlchemy==2.0.23
+typing_extensions==4.8.0
+Werkzeug==2.3.0
