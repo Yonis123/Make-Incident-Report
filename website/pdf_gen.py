@@ -39,7 +39,7 @@ class PDF(FPDF):
 # make pdf function 
 
 def make_pdf(address, date_incident, time_start, resolved, time_resolved, people_involved, person_1_name, person_1_contact, person_1_type, person_1_extra, person_2_name, person_2_contact, 
-             person_2_type, person_2_extra, person_3_name, person_3_contact, person_3_type, person_3_extra, event_description):
+             person_2_type, person_2_extra, person_3_name, person_3_contact, person_3_type, person_3_extra, event_description, arrived):
     pdf = PDF()
     pdf.make_header()
     
@@ -94,12 +94,16 @@ def make_pdf(address, date_incident, time_start, resolved, time_resolved, people
         pdf.make_title(text='Person 3:', x=17, y=pdf.get_y() + 12, size=12)
         pdf.text_multiple_line(x=pdf.get_x(), y=pdf.get_y(), w=140, h=12, text=person_format(person_3_name, person_3_type, person_3_extra, person_3_contact))
 
-
-    
-        
     
     pdf.make_title(text='Event Description', x=84, y=pdf.get_y() + 20, size=18)
     pdf.text_multiple_line(x=19, y=pdf.get_y() + 15, w=173, h=12, text=event_description)
+    
+    def format_arrived(arrived, service_responses):
+        text = 'Their was a {}'
+        # for item in arrived:
+        pass
+            
+        
 
     pdf.make_title(text='Emergency Response', x=79, y=pdf.get_y() + 20, size=18)
     # include if statement if any of them are selected and make it so if multiple of the emergency response types are selected I can add an and at the end and make it more of a complete sentence
